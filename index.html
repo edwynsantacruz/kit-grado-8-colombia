@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit Reto 8° Colombia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <a class="skip-link" href="#subjectView">Saltar al contenido</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">8°</div>
+        <div>
+          <h1>Kit Reto 8°</h1>
+          <p>Preparación para ingreso a grado octavo</p>
+        </div>
+      </div>
+      <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="subjectNav progressPanel resetBtn">☰ Menú de áreas</button>
+      <nav id="subjectNav" aria-label="Áreas del kit"></nav>
+      <div id="progressPanel" class="progress-card">
+        <span>Progreso total</span>
+        <strong id="totalScore">0 XP</strong>
+        <div class="bar"><div id="totalBar"></div></div>
+        <small id="badgeText">Inicia tu primera misión</small>
+      </div>
+      <button id="resetBtn" class="ghost">Reiniciar progreso</button>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <div>
+          <span class="pill">ABP + Gamificación + Casos</span>
+          <h2>Entrena competencias clave para postularte a octavo</h2>
+          <p>Aplicación offline con explicaciones, ejemplos guiados y 140 retos progresivos en Matemáticas, Ciencias, Sociales, Lenguaje, Inglés, Física y Química.</p>
+          <div class="hero-actions">
+            <button id="startBtn">Comenzar misión</button>
+            <button id="printBtn" class="secondary">Imprimir / guardar PDF</button>
+          </div>
+        </div>
+        <div class="mission-card">
+          <h3>Historia central</h3>
+          <p>Tu colegio abrirá cupos para grado octavo. Para ganar una insignia de admisión deberás resolver problemas de una ciudad escolar: presupuesto, ambiente, ciudadanía, lectura crítica, comunicación en inglés, energía y laboratorio seguro.</p>
+          <ul>
+            <li>20 retos por asignatura</li>
+            <li>Retroalimentación inmediata</li>
+            <li>Ruta de menor a mayor complejidad</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <div class="stat"><span>Áreas</span><strong>7</strong></div>
+        <div class="stat"><span>Retos</span><strong>140</strong></div>
+        <div class="stat"><span>Meta</span><strong>80%</strong></div>
+        <div class="stat"><span>Modalidad</span><strong>Offline</strong></div>
+      </section>
+
+      <section id="subjectView" class="subject-view"></section>
+    </main>
+  </div>
+
+  <template id="subjectTemplate">
+    <article class="subject-card">
+      <div class="subject-header">
+        <div>
+          <span class="pill subject-pill"></span>
+          <h2 class="subject-title"></h2>
+          <p class="subject-desc"></p>
+        </div>
+        <div class="subject-xp"><strong></strong><span>XP del área</span></div>
+      </div>
+      <div class="grid-two">
+        <section class="panel">
+          <h3>Problema ABP</h3>
+          <p class="problem"></p>
+          <h3>Explicación esencial</h3>
+          <div class="explanation"></div>
+        </section>
+        <section class="panel example-panel">
+          <h3>Ejemplo guiado</h3>
+          <div class="example"></div>
+          <h3>Estrategias didácticas</h3>
+          <ul class="strategies"></ul>
+        </section>
+      </div>
+      <section class="practice">
+        <div class="practice-title">
+          <h3>Zona de práctica: 20 retos progresivos</h3>
+          <p>Marca una respuesta. Cada acierto suma 10 XP. Puedes reintentar sin penalización.</p>
+        </div>
+        <div class="exercise-list"></div>
+      </section>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
