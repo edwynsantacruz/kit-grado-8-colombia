@@ -1,9 +1,9 @@
 {
-  "name": "Kit Reto 8 Colombia - Todos los niveles",
-  "short_name": "Kit8",
+  "name": "Kit Reto 8 Colombia Institucional",
+  "short_name": "Kit 8 Institucional",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f5f7fb",
-  "theme_color": "#111827",
-  "icons": []
+  "background_color": "#f6f8fb",
+  "theme_color": "#113a7d",
+  "lang": "es"
 }
